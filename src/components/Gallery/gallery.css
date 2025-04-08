@@ -1,0 +1,37 @@
+#gallery {
+    overflow: hidden;
+    width: 100vw;
+    max-width: 65rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.galleryTitle {
+    font-size: 3rem;
+    font-weight: 600;
+    padding-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.galleryDesc {
+    font-weight: 400;
+    font-size: 1.1rem;
+    max-width: 51rem;
+    margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 720px) {
+    .galleryTitle {
+        font-size: 2.5rem;
+    }
+    
+    .galleryDesc {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+} 

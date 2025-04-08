@@ -20,11 +20,12 @@
 .desktopMenuListItem {
     margin: 1rem;
     cursor: pointer;
+    padding: 0 1rem;
 }
 .desktopMenuListItem:hover {
-    color: red;
+    color: rgba(255, 94, 0, 1);
     padding-bottom: 0.5rem;
-    border-bottom: 3px solid red;
+    border-bottom: 3px solid rgba(255, 94, 0, 1);
 }
 
 .desktopMenuBtn {
@@ -50,9 +51,9 @@
 }
 
 .active {
-    color: red;
+    color: rgba(255, 94, 0, 1);
     padding-bottom: 0.5rem;
-    border-bottom: 3px solid red;
+    border-bottom: 3px solid rgba(255, 94, 0, 1);
 }
 
 .mobMenu {

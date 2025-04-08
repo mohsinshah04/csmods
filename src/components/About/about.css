@@ -1,0 +1,99 @@
+#about {
+    overflow: hidden;
+    width: 100vw;
+    max-width: 65rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.aboutTitle {
+    font-size: 3rem;
+    font-weight: 600;
+    padding-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.aboutDesc {
+    font-weight: 400;
+    font-size: 1.1rem;
+    max-width: 51rem;
+    margin-bottom: 3rem;
+}
+
+.aboutCards {
+    margin: 1.5rem 0;
+    width: 100%;
+    max-width: 80%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.aboutCard {
+    display: flex;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    background: rgb(50, 50, 50);
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.aboutCard:hover {
+    transform: translateY(-5px);
+}
+
+.aboutCardImg {
+    object-fit: cover;
+    height: 3rem;
+    width: 3rem;
+    margin-right: 2rem;
+}
+
+.aboutCardText > h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.aboutCardText > p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+@media screen and (max-width: 720px) {
+    .aboutTitle {
+        font-size: 2.5rem;
+    }
+    
+    .aboutDesc {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .aboutCards {
+        max-width: 100%;
+    }
+
+    .aboutCard {
+        padding: 1rem;
+    }
+
+    .aboutCardImg {
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-right: 1rem;
+    }
+
+    .aboutCardText > h2 {
+        font-size: 1.2rem;
+    }
+
+    .aboutCardText > p {
+        font-size: 0.9rem;
+    }
+} 
