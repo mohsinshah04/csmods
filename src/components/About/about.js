@@ -1,37 +1,45 @@
 import React from 'react'
 import './about.css'
-import TeamIcon from '../../assets/ui-design.png'
-import ProjectsIcon from '../../assets/website-design.png'
-import CarsIcon from '../../assets/app-design.png'
+import { Link } from 'react-scroll'
 
 const About = () => {
   return (
     <section id="about">
-        <h2 className="aboutTitle">About Us</h2>
+        <h1 className="aboutTitle">About CSMods</h1>
         <p className="aboutDesc">
-            Dedicated to pushing the boundaries of hybrid racing technology and engineering excellence
+            Welcome to CSMods, where we transform Seiko watches into unique timepieces that reflect your personal style.
         </p>
-        <div className="aboutCards">
-            <div className="aboutCard">
-                <img src={TeamIcon} alt="Team Icon" className="aboutCardImg" />
-                <div className="aboutCardText">
-                    <h2>Meet The Team</h2>
-                    <p>A diverse group of passionate engineering students working together to innovate in motorsports</p>
-                </div>
+        
+        <div className="aboutSections">
+            <div className="aboutSection">
+                <h2 className="sectionTitle">What is a Seiko Mod?</h2>
+                <p className="sectionDesc">
+                    A Seiko mod is a customized version of a Seiko watch, where we replace or enhance various components 
+                    to create a unique timepiece. From dials and hands to bezels and crystals, we can transform your 
+                    watch into something truly special.
+                </p>
             </div>
-            <div className="aboutCard">
-                <img src={ProjectsIcon} alt="Projects Icon" className="aboutCardImg" />
-                <div className="aboutCardText">
-                    <h2>Our Projects</h2>
-                    <p>From concept to competition, we design and build cutting-edge hybrid race cars</p>
-                </div>
+
+            <div className="aboutSection">
+                <h2 className="sectionTitle">Why Choose a Seiko Mod?</h2>
+                <p className="sectionDesc">
+                    Seiko mods offer the perfect blend of quality and customization. You get the reliability of a Seiko 
+                    movement with the personal touch of custom components. Whether you want a unique color scheme, 
+                    improved functionality, or a completely new look, a Seiko mod lets you create a watch that's 
+                    uniquely yours.
+                </p>
             </div>
-            <div className="aboutCard">
-                <img src={CarsIcon} alt="Cars Icon" className="aboutCardImg" />
-                <div className="aboutCardText">
-                    <h2>Our Legacy</h2>
-                    <p>A proud history of innovation and achievement in Formula SAE competitions</p>
-                </div>
+
+            <div className="aboutSection">
+                <h2 className="sectionTitle">How to Get Your Custom Seiko Mod</h2>
+                <p className="sectionDesc">
+                    Ready to create your dream watch? It's simple! Just reach out to us through the contact form below, 
+                    and we'll work with you to design the perfect Seiko mod. Whether you have a specific vision in mind 
+                    or need guidance, we're here to help bring your watch dreams to life.
+                </p>
+                <Link to="contact" smooth={true} duration={500}>
+                    <button className="contactBtn">Contact Me</button>
+                </Link>
             </div>
         </div>
     </section>

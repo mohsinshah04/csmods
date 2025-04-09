@@ -1,0 +1,89 @@
+#services {
+    overflow: hidden;
+    width: 100vw;
+    max-width: 65rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.sectionTitle {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 3rem 0 1rem 0;
+    color: black;
+}
+
+.servicesCards {
+    margin: 1.5rem 0;
+    width: 100%;
+    max-width: 80%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.serviceCard {
+    display: flex;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    background: rgb(50, 50, 50);
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.serviceCard:hover {
+    transform: translateY(-5px);
+}
+
+.serviceCardImg {
+    object-fit: cover;
+    height: 3rem;
+    width: 3rem;
+    margin-right: 2rem;
+}
+
+.serviceCardText > h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.serviceCardText > p {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #ccc;
+}
+
+@media screen and (max-width: 720px) {
+    .sectionTitle {
+        font-size: 1.75rem;
+    }
+
+    .servicesCards {
+        max-width: 100%;
+    }
+
+    .serviceCard {
+        padding: 1rem;
+    }
+
+    .serviceCardImg {
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-right: 1rem;
+    }
+
+    .serviceCardText > h2 {
+        font-size: 1.2rem;
+    }
+
+    .serviceCardText > p {
+        font-size: 0.9rem;
+    }
+} 
