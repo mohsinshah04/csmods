@@ -203,3 +203,12 @@
         margin-bottom: 0.5rem;
     }
 }
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    padding: 2rem 0;
+}

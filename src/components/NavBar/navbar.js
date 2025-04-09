@@ -11,21 +11,81 @@ const Navbar = () => {
 
   const handleContactClick = () => {
     setActiveSection('contact');
-    document.getElementById('contact').scrollIntoView({behavior: 'smooth'});
+    document.getElementById('contact').scrollIntoView({behavior: 'smooth', block: 'end'});
+  };
+
+  const handleSectionClick = (section) => {
+    setActiveSection(section);
+    setShowMenu(false);
   };
 
   return (
     <nav className="navbar">
       <img src={logo} alt="Logo" className='logo' />
       <div className="desktopMenu">
-        <Link activeClass='active' to='intro' spy={true} smooth={true} offset={-100} duration={500} className="desktopMenuListItem" onClick={() => setActiveSection('intro')}>Home</Link>
-        <Link activeClass='active' to='about' spy={true} smooth={true} offset={-50} duration={500} className="desktopMenuListItem" onClick={() => setActiveSection('about')}>About</Link>
-        <Link activeClass='active' to='services' spy={true} smooth={true} offset={-50} duration={500} className="desktopMenuListItem" onClick={() => setActiveSection('services')}>Services</Link>
-        <Link activeClass='active' to='gallery' spy={true} smooth={true} offset={-50} duration={500} className="desktopMenuListItem" onClick={() => setActiveSection('gallery')}>Gallery</Link>
-        <Link activeClass='active' to='reviews' spy={true} smooth={true} offset={-50} duration={500} className="desktopMenuListItem" onClick={() => setActiveSection('reviews')}>Reviews</Link>
+        <Link 
+          activeClass='active' 
+          to='intro' 
+          spy={true} 
+          smooth={true} 
+          offset={-50} 
+          duration={500} 
+          className={`desktopMenuListItem ${activeSection === 'intro' ? 'active' : ''}`}
+          onClick={() => handleSectionClick('intro')}
+        >
+          Home
+        </Link>
+        <Link 
+          activeClass='active' 
+          to='about' 
+          spy={true} 
+          smooth={true} 
+          offset={-50} 
+          duration={500} 
+          className={`desktopMenuListItem ${activeSection === 'about' ? 'active' : ''}`}
+          onClick={() => handleSectionClick('about')}
+        >
+          About
+        </Link>
+        <Link 
+          activeClass='active' 
+          to='services' 
+          spy={true} 
+          smooth={true} 
+          offset={-50} 
+          duration={500} 
+          className={`desktopMenuListItem ${activeSection === 'services' ? 'active' : ''}`}
+          onClick={() => handleSectionClick('services')}
+        >
+          Services
+        </Link>
+        <Link 
+          activeClass='active' 
+          to='gallery' 
+          spy={true} 
+          smooth={true} 
+          offset={-50} 
+          duration={500} 
+          className={`desktopMenuListItem ${activeSection === 'gallery' ? 'active' : ''}`}
+          onClick={() => handleSectionClick('gallery')}
+        >
+          Gallery
+        </Link>
+        <Link 
+          activeClass='active' 
+          to='reviews' 
+          spy={true} 
+          smooth={true} 
+          offset={-50} 
+          duration={500} 
+          className={`desktopMenuListItem ${activeSection === 'reviews' ? 'active' : ''}`}
+          onClick={() => handleSectionClick('reviews')}
+        >
+          Reviews
+        </Link>
       </div>
       <button 
-        className={`desktopMenuBtn ${activeSection === 'contact' ? 'active' : ''}`} 
+        className={`desktopMenuBtn ${activeSection === 'contact' ? 'active' : ''}`}
         onClick={handleContactClick}
       >
         <img src={contactImg} alt="Contact" className="desktopMenuImg" />Contact Me
@@ -33,12 +93,78 @@ const Navbar = () => {
 
       <img src={menu} alt="Menu" className='mobMenu' onClick={() => setShowMenu(!showMenu)}/>
       <div className="navMenu" style={{display: showMenu ? 'flex' : 'none'}}>
-        <Link activeClass='active' to='intro' spy={true} smooth={true} offset={-100} duration={500} className="listItem" onClick={() => setShowMenu(false)}>Home</Link>
-        <Link activeClass='active' to='about' spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={() => setShowMenu(false)}>About</Link>
-        <Link activeClass='active' to='services' spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={() => setShowMenu(false)}>Services</Link>
-        <Link activeClass='active' to='gallery' spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={() => setShowMenu(false)}>Gallery</Link>
-        <Link activeClass='active' to='reviews' spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={() => setShowMenu(false)}>Reviews</Link>
-        <Link activeClass='active' to='contact' spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={() => setShowMenu(false)}>Contact</Link>
+        <Link 
+          activeClass='active' 
+          to='intro' 
+          spy={true} 
+          smooth={true} 
+          offset={-50} 
+          duration={500} 
+          className={`listItem ${activeSection === 'intro' ? 'active' : ''}`}
+          onClick={() => handleSectionClick('intro')}
+        >
+          Home
+        </Link>
+        <Link 
+          activeClass='active' 
+          to='about' 
+          spy={true} 
+          smooth={true} 
+          offset={-50} 
+          duration={500} 
+          className={`listItem ${activeSection === 'about' ? 'active' : ''}`}
+          onClick={() => handleSectionClick('about')}
+        >
+          About
+        </Link>
+        <Link 
+          activeClass='active' 
+          to='services' 
+          spy={true} 
+          smooth={true} 
+          offset={-50} 
+          duration={500} 
+          className={`listItem ${activeSection === 'services' ? 'active' : ''}`}
+          onClick={() => handleSectionClick('services')}
+        >
+          Services
+        </Link>
+        <Link 
+          activeClass='active' 
+          to='gallery' 
+          spy={true} 
+          smooth={true} 
+          offset={-50} 
+          duration={500} 
+          className={`listItem ${activeSection === 'gallery' ? 'active' : ''}`}
+          onClick={() => handleSectionClick('gallery')}
+        >
+          Gallery
+        </Link>
+        <Link 
+          activeClass='active' 
+          to='reviews' 
+          spy={true} 
+          smooth={true} 
+          offset={-50} 
+          duration={500} 
+          className={`listItem ${activeSection === 'reviews' ? 'active' : ''}`}
+          onClick={() => handleSectionClick('reviews')}
+        >
+          Reviews
+        </Link>
+        <Link 
+          activeClass='active' 
+          to='contact' 
+          spy={true} 
+          smooth={true} 
+          offset={-50} 
+          duration={500} 
+          className={`listItem ${activeSection === 'contact' ? 'active' : ''}`}
+          onClick={() => handleSectionClick('contact')}
+        >
+          Contact
+        </Link>
       </div>
     </nav>
   )

@@ -1,37 +1,42 @@
 #gallery {
-    overflow: hidden;
-    width: 100vw;
-    max-width: 65rem;
+    min-height: calc(100vh - 4rem);
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 auto;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    margin: 0 auto;
-    padding: 0 1rem;
+    padding: 2rem 0;
 }
 
 .galleryTitle {
     font-size: 3rem;
-    font-weight: 600;
-    padding-top: 3rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
 }
 
 .galleryDesc {
-    font-weight: 400;
-    font-size: 1.1rem;
-    max-width: 51rem;
-    margin-bottom: 3rem;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+    max-width: 50rem;
+    padding: 0 1rem;
+}
+
+.galleryContainer {
+    width: 100%;
+    max-width: 60rem;
+    padding: 0 1rem;
 }
 
 @media screen and (max-width: 720px) {
     .galleryTitle {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     
     .galleryDesc {
         font-size: 1rem;
-        margin-bottom: 2rem;
     }
 } 

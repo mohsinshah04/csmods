@@ -37,9 +37,6 @@ const About = () => {
                     and we'll work with you to design the perfect Seiko mod. Whether you have a specific vision in mind 
                     or need guidance, we're here to help bring your watch dreams to life.
                 </p>
-                <Link to="contact" smooth={true} duration={500}>
-                    <button className="contactBtn">Contact Me</button>
-                </Link>
             </div>
         </div>
     </section>
