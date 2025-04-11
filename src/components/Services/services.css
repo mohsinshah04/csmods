@@ -1,7 +1,7 @@
 #services {
     min-height: calc(100vh - 4rem);
     width: 100%;
-    max-width: 60rem;
+    max-width: 80rem;
     margin: 0 auto;
     text-align: center;
     display: flex;
@@ -19,40 +19,60 @@
 
 .servicesDesc {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     color: #666;
-    max-width: 50rem;
+    max-width: 70rem;
     padding: 0 1rem;
 }
 
 .servicesContainer {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
+    margin: 1rem auto;
     width: 100%;
-    max-width: 60rem;
-    padding: 0 1rem;
+    max-width: 70rem;
+    padding: 0 2rem;
 }
 
 .serviceCard {
     background: #f8f8f8;
-    border-radius: 1rem;
+    border-radius: 0.75rem;
     padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+    text-align: left;
+}
+
+.serviceCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: #ddd;
 }
 
 .sectionTitle {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    margin: 1rem 0;
-    color: black;
+    margin: 0 0 0.75rem 0;
+    color: #222;
+    text-align: center;
+    padding-right: 2rem;
 }
 
 .sectionDesc {
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.6;
     color: #555;
     text-align: left;
+}
+
+@media screen and (max-width: 1024px) {
+    .servicesContainer {
+        max-width: 60rem;
+        padding: 0 1.5rem;
+    }
 }
 
 @media screen and (max-width: 720px) {
@@ -61,10 +81,20 @@
     }
     
     .sectionTitle {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
+        padding-right: 1.5rem;
     }
     
     .servicesDesc {
         font-size: 1rem;
+    }
+
+    .serviceCard {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .servicesContainer {
+        max-width: 100%;
+        padding: 0 1rem;
     }
 } 
